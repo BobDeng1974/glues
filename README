@@ -1,3 +1,23 @@
+///////////////////////////// Maintainer's Readme /////////////////////////////
+
+This is a fork of the original GLU ES library created by Mike Gorchak at
+https://code.google.com/p/glues/. This fork is maintained by Joshua Bodine.
+
+To build, you must first have the OpenGL ES and SDL 2 libraries installed. If
+you are cross-compiling or using a toolchain, you will need to set up that
+environment first and possibly modify the build commands. The following
+commands are used to build this library:
+
+$ ./autogen.sh
+$ ./configure
+$ make
+$ sudo make install
+
+Please report any bugs or issues on the GitHub project page at
+https://github.com/macsforme/glues.
+
+
+/////////////////////////////// Original Readme ///////////////////////////////
 
 GLU ES (version 1.5)
 
