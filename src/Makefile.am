@@ -48,7 +48,7 @@ libGLUES_la_SOURCES = \
 	libnurbs/internals/arcsorter.cc \
 	libnurbs/internals/monotonizer.cc \
 	libnurbs/internals/maplist.cc \
-	libnurbs/internals/bezierarc.h 
+	libnurbs/internals/bezierarc.h \
 	libnurbs/internals/trimvertpool.h \
 	libnurbs/internals/curve.cc \
 	libnurbs/internals/jarcloc.h \
