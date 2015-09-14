@@ -22,8 +22,11 @@ including <GLES/gl.h>):
 To check for the presence of headers and library files on a system from
 configure.ac, you can do something like this:
 
+OLD_CPPFLAGS="$CPPFLAGS"
+CPPFLAGS="$CPPFLAGS -D__USE_SDL_GLES__"
 AC_CHECK_HEADER([GLES/glu.h], [], [
 	AC_MSG_ERROR([no OpenGL GLU ES headers were found])])
+CPPFLAGS="$OLD_CPPFLAGS"
 AC_CHECK_LIB([GLUES], [gluNewQuadric], [], [
 	AC_MSG_ERROR([no OpenGL GLU ES library was found])], [-lGLESv1_CM])
 
