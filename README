@@ -13,6 +13,20 @@ $ ./configure
 $ make
 $ sudo make install
 
+To use the library in your code, you can include the headers like this (after
+including <GLES/gl.h>):
+
+#define __USE_SDL_GLES__
+#include <GLES/glu.h>
+
+To check for the presence of headers and library files on a system from
+configure.ac, you can do something like this:
+
+AC_CHECK_HEADER([GLES/glu.h], [], [
+	AC_MSG_ERROR([no OpenGL GLU ES headers were found])])
+AC_CHECK_LIB([GLUES], [gluNewQuadric], [], [
+	AC_MSG_ERROR([no OpenGL GLU ES library was found])], [-lGLESv1_CM])
+
 Please report any bugs or issues on the GitHub project page at
 https://github.com/macsforme/glues.
 
