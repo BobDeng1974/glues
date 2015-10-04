@@ -13,6 +13,13 @@ $ ./configure
 $ make
 $ sudo make install
 
+To build the library using Xcode, open the project file GLUES.xcodeproj. You
+will have to either add the location of SDL2 headers on your system to the
+header search paths in the Xcode project before building, or else build from
+the command line with the path added to the compiler flags, for example:
+
+$ xcodebuild -configuration Release build OTHER_CFLAGS=-I/usr/local/include
+
 To use the library in your code, you can include the headers like this (after
 including <GLES/gl.h>):
 
