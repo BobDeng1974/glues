@@ -27,7 +27,6 @@ AC_C_INLINE
 AC_TYPE_SIZE_T
 
 # Checks for library functions.
-AC_FUNC_REALLOC
 AC_CHECK_FUNCS([bzero floor memset select sqrt])
 
 # Right now we only support SDL2
